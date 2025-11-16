@@ -88,6 +88,14 @@
   {{ page.my_number }}
   ```
 
+- we must include front matter for jekyll to process any liquid tags in the pages.
+- to make jekyll process pages without defining variables in the front matter, use:
+  
+  ```jekyll
+  ---
+  ---
+  ```
+
 ### **4. Layouts:**
 
 ### **5. Includes:**
