@@ -49,7 +49,44 @@
 
 ### **2. Liquid:**
 
+- liquid is a templating language with 3 main components:
+  - **objects** tell liquid to output pre-defined variables as content on a page.
+    - use double curly braces for objects: `{{` object-name `}}`
+    - **example:** `{{ page.title }}` displays the `page.title` variable
+  - **tags** define the logic & control flow for templates.
+    - use curly braces & percentage signs for tags `{%` & `%}`
+    - **example:** this below tag displays the sidebar if the value of `show_sidebar` page variable is true.
+
+      ```html
+      {% if page.show_sidebar %}
+      <div class="sidebar">
+        sidebar-content
+      </div>
+      {% endif %}
+      ```
+
+  - **filters** change the output of a liquid object and is used within an object's output, separated by a `|` pipe operator.
+    - **example:** this below filter changes the "hi" to "Hi"
+  
+      ```html
+      {{ "hi" | capitalize }}
+      ```
+
 ### **3. Front Matter:**
+
+- front matter is a snippet of [YAML](yaml.org) placed b/w two triple-dashed lines at the start of the files. we can use it to set variables for the page, example:
+
+  ```yaml
+  ---
+  my_number: 5
+  ---
+  ```
+
+- we can call the above front matter variables in liquid using the `page` variable. the example below outputs the value of the `my_number` variable defined above:
+  
+  ```html
+  {{ page.my_number }}
+  ```
 
 ### **4. Layouts:**
 

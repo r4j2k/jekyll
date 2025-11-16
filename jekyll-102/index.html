@@ -1,3 +1,7 @@
+---
+# front matter tells Jekyll to process Liquid
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,6 @@
 </head>
 <body>
     <h1>Hello World, Jekyll!</h1>
-    <p>from Ranjith</p>
+    <h1>{{ "Hello World, Jekyll!" | downcase }}</h1>    
 </body>
 </html>
