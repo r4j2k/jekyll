@@ -98,6 +98,12 @@
 
 ### **4. Layouts:**
 
+- jekyll supports markdown & HTML when building pages since markdown is a great choice for pages with just text & image content as it's less verbose than raw HTML.
+
+- **Problem Statement 1:** when we have to create a new page - we can create an about.html page from scratch and copy, paste index.html into about.html and customize it as per need but this approach creates multiple duplicate code, when we have more than one page.
+
+- **Solution:** Layouts. They're templates that can be used by any page in our site, they're wrapped around the page content & stored in `_layouts`
+
 ### **5. Includes:**
 
 ### **6. Data Files:**
@@ -120,3 +126,4 @@
 - <https://jekyllrb.com/docs/configuration/>
 - <https://jekyllrb.com/docs/step-by-step/10-deployment/>
 - <https://jekyllrb.com/docs/configuration/options/#serve-command-options>
+- <https://daringfireball.net/projects/markdown/syntax>
